@@ -1,0 +1,88 @@
+.carrousel{
+    height: 360px;
+    width: 100%;
+    padding: $padding;
+    background-image: url("../img/slider.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media( min-width: $mq3){
+        height: 468px;
+        width: 468px;
+        flex-shrink: 0;
+        padding-left: 78px;
+        padding-top: 40px;
+        padding-right: 70px;
+    }
+    @media( min-width: $mq4){
+        width: 530px;
+        padding-left: 200px;
+
+    }
+    &__title{
+        line-height: 1.28;
+        letter-spacing: -0.1px;
+        margin-bottom: $padding;
+        span{ font-weight: bold; }
+    }
+    &__description{
+        line-height: 1.67;
+        letter-spacing: 0.5px;
+        font-size: 16px;
+        width: 250px;
+        margin-bottom: $padding;
+
+        @media( min-width: $mq3){ font-size: 18px; }
+    }
+}
+.control__icon{
+    height: 54px;
+    width: 54px;
+    padding: 18px;
+    border-radius: 50%;
+    border: 1px solid $white;
+    margin-right: 20px;
+    cursor: pointer;
+    &:hover{
+        background-color: $green;
+        box-shadow: $box-shadow;
+        border: none;
+    }
+}
+.top{
+    overflow: hidden;
+    transition: $transistion;
+    position: relative;
+    &__generic{
+        @include flex(flex, flex-start, center, row, nowrap);
+        width: 100%;
+        padding: $padding;
+        transition: $transistion;
+        @media( min-width: $mq3){
+            height: 468px;
+            padding-left: 50px;
+        }
+    }
+    &__item{
+        margin-right: $padding;
+        position: relative;
+        width: 288px;
+        height: 344px;
+        border-radius: 20px;
+        object-fit: contain;
+        &:hover{
+            cursor: pointer;
+            box-shadow: $box-shadow;
+        }
+        &-number{
+            @include flex(flex, center, center, row, nowrap);
+            position: absolute;
+            top: $padding;
+            left: $padding;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            background-color: $green;
+        }
+    }
+
+}

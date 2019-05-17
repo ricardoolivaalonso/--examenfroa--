@@ -1,0 +1,33 @@
+html, body {
+	  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    background: $white;
+    color: $white;
+    user-select: none;
+}
+h1,
+h2,
+h3,
+a,
+span{
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+}
+h1{
+    font-size: 36px;
+    line-height: 1.28;
+    letter-spacing: -0.1px;
+
+    @media(min-width:$mq2 ){ font-size: 53px; }
+}
+h2{
+	font-size: 32px;
+	 @media( min-width: $mq3){ font-size: 50px;}
+}
+ul{ list-style: none; }
+a{
+    text-decoration: none;
+    color: $white;
+	outline: none;
+}

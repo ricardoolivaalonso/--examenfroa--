@@ -1,0 +1,55 @@
+.footer{
+    &__generic{
+        @media( min-width: $mq3){ width: calc(100% - 55px); }
+    }
+    &__icon{
+        width: 31px;
+        height: 31px;
+        object-fit: contain;
+        cursor: pointer;
+
+        @media( min-width: $mq3){
+            width: 55px;
+            height: 55px;
+        }
+    }
+}
+.terms{
+    @include flex(flex, flex-start, flex-start, column, wrap);
+    font-size: 13px;
+    letter-spacing: 1.1px;
+
+    @media( min-width: $mq3){
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    &__link{
+        font-size: 13px;
+        letter-spacing: 1.1px;
+        line-height: 26px;
+
+        &:hover{
+            cursor: pointer;
+            transform: scale(.98);
+
+        }
+        @media( min-width: $mq3){
+            margin-right: 25px;
+            color: $black;
+        }
+    }
+}
+.social{
+    margin: $padding / 2 0;
+    &__icon{
+        width: 31px;
+        height: 31px;
+        object-fit: contain;
+        margin-right: 12px;
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: $transistion;
+        }
+    }
+}

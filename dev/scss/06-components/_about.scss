@@ -1,0 +1,48 @@
+.about{
+    padding-bottom: $padding * 1.5;
+    &__title{
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 2;
+        letter-spacing: 1.9px;
+        text-align: left;
+        color: $green;
+
+        @media( min-width: $mq4){
+            width: 30%;
+            text-align: right;
+        }
+    }
+    &__button{
+        align-self: flex-end;
+        width: 230px;
+        @media( min-width: $mq4){ margin-bottom: 67px; }
+    }
+}
+
+.info{
+    margin-top: $padding;
+    margin-bottom: $padding;
+    @media( min-width: $mq4){
+        width: 500px;
+        max-width: 550px;
+        margin: 0 50px;
+    }
+
+    &__title{
+        line-height: 1.14;
+        letter-spacing: -0.1px;
+        color: $black;
+        margin-bottom: $padding ;
+    }
+    &__description{
+        color: $gray-2;
+        font-size: 16px;
+        line-height: 1.78;
+        letter-spacing: 0.5px;
+        @media( min-width: $mq3){
+            width: 390px;
+            font-size: 18px;
+        }
+    }
+}

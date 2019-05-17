@@ -1,0 +1,85 @@
+.main-container{
+    width: 100%;
+    max-width: $max-width;
+    margin: auto;
+}
+.trigger-menu{
+    height: 34px;
+    width: 44px;
+    position: fixed;
+    top: $padding;
+    right: $padding;
+    z-index: $z1;
+    padding: 7px;
+    background: rgba($black, .3);
+    @media( min-width: $mq3){ visibility: hidden;}
+}
+.header{
+    @include flex(flex, center, flex-start, column, wrap);
+    height: 100vmax;
+    width: 100%;
+    background-image: url("../img/header.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: $box-shadow;
+    padding: $padding;
+
+    @media( min-width: $mq2){
+        height: 100vh;
+    }
+
+    @media( min-width: $mq3){
+        justify-content: flex-start;
+        height: 785px;
+        padding-top: 44px;
+        padding-left: 36px;
+        padding-right: 94px;
+    }
+}
+.about{
+    width: 100%;
+    padding: $padding;
+    background-color: $gray-l;
+
+    @media( min-width: $mq3){
+        padding-left: 78px;
+    }
+    @media( min-width: $mq4){
+        height: 392px;
+        padding-top: 90px;
+        @include flex(flex, flex-start, flex-start, row, nowrap);
+    }
+}
+
+.slider{
+    width: 100%;
+    @media( min-width: $mq3){
+        @include flex(flex, flex-start, flex-start, row, nowrap);
+    }
+}
+
+.banner{
+    width: 100%;
+    height: 360px;
+    background-image: url("../img/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media( min-width: $mq3){
+        height: 586px;
+        background-position: center;
+    }
+}
+.footer{
+    width: 100%;
+    background-color: $green;
+    @include flex(flex, flex-start, flex-start, column, wrap);
+    padding: $padding;
+
+    @media( min-width: $mq3){
+        height: 203px;
+        padding-top: 64px;
+        padding-left: 78px;
+        padding-right: 64px;
+    }
+}
